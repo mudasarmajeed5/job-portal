@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
             }
         })
         return NextResponse.json(job)
-    } catch (error) {
+    } catch {
         console.log("Error creating a JOB");
         return NextResponse.json("Internal server error", { status: 500 })
     }
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
 
 
 
-export async function GET(req: NextRequest) {
+export async function GET() {
     try {
         const jobs = await prisma.job.findMany({
             orderBy: {
@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
             }
         })
         return NextResponse.json(jobs)
-    } catch (error) {
+    } catch {
         console.log("Error creating a JOB");
         return NextResponse.json("Internal server error", { status: 500 })
     }

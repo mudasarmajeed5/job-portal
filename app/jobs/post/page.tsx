@@ -13,7 +13,7 @@ const PostJob = () => {
             salary: formData.get("salary"),
         }
         try {
-            const response = await fetch('/api/jobs',
+             await fetch('/api/jobs',
                 {
                     method: "POST",
                     headers: {

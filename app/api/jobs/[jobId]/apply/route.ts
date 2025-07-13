@@ -44,7 +44,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ job
             }
         })
         return NextResponse.json(application)
-    } catch (error) {
+    } catch {
         return NextResponse.json("Internal server error", { status: 500 })
     }
 }
