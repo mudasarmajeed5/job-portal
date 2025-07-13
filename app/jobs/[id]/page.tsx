@@ -1,7 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import ApplyButton from "./ApplyButton";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -16,7 +15,7 @@ export default async function JobDetails({ params }: { params: Promise<{ id: str
         }
     })
     if (!job) {
-        notFound();
+        return <div>Job not found</div>
     }
     return (
         <div className="max-w-2xl mx-auto p-6 bg-white rounded-md shadow-md space-y-4">
