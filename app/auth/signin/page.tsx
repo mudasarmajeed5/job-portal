@@ -1,7 +1,6 @@
 "use client"
 import { FaGithub } from "react-icons/fa"
 import { login } from "@/lib/auth"
-import { signIn } from "next-auth/react"
 export default function SignInPage() {
     return (
         <>

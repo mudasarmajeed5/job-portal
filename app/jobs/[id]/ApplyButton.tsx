@@ -21,7 +21,7 @@ const ApplyButton = ({ jobId }: ApplyButtonProps) => {
         setErrorMessage("")
         setApplicationStatus("idle")
         try {
-            const response = await fetch(`/api/jobs/${jobId}/apply`,
+            await fetch(`/api/jobs/${jobId}/apply`,
                 {
                     method: "POST",
                 }

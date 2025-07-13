@@ -7,7 +7,7 @@ const Jobs = async (
     Promise<{ [key: string]: string | string[] | undefined }>
   }
 ) => {
-  const { q, type, location } = await searchParams;
+  const { q, type } = await searchParams;
   const query = q as string | undefined;
   const searchType = type as string | undefined;
   const searchLocation = type as string | undefined
